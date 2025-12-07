@@ -1,0 +1,81 @@
+@use "sass:color"
+@use "sass:list"
+$font-stack: "Rubik", sans
+$bg-color-black: #303030
+$bg-color-white: #c2c2c2
+$fg-color-black: $bg-color-white
+$fg-color-white: $bg-color-black
+$accent-bg: #663399
+$accent-fg: #e1e7e1
+$accent-hl: #442266
+$accent-hl2: #663355
+
+.hidden
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+.cell
+  display: flex;
+  aspect-ratio: 1/1
+  width: 20%
+.container-common
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  font: $font-stack
+  aspect-ratio: 1;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-color: $accent-bg;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 10px;
+  transition: 0.5s;
+.container-common:hover
+  border-color: $accent-hl2;
+  transition: 0.5s;
+.container-black 
+  @extend .container-common
+  color: $fg-color-black 
+  background-color: $bg-color-black
+.container-white
+  @extend .container-common
+  color: $fg-color-white
+  background-color: $bg-color-white
+.date
+  font-size: 3vw
+  font-weight: 700
+.day
+  font-size: 2vw
+  font-weight: 400
+
+.add-ev-outer
+  display: flex
+  flex-direction: row-reverse
+  aspect-ratio: 1/1;
+  width: 100%
+  height: 30%
+  transition: 0.5s;
+  margin-top: -7%
+  margin-right: -16%
+.add-ev
+  display: flex
+  justify-content: center; 
+  align-items: center;
+  width: 33%
+  height: 100%
+  aspect-ratio: 1/1;
+  border: 2px $accent-bg
+  background-color: $accent-bg
+  border-radius: 100%
+  color: $accent-fg
+  transition: 1s
+.add-ev:hover
+  border: 2px $accent-hl
+  background-color: $accent-hl
+  border-radius: 100%
+  color: $accent-fg
+  transition: 1s

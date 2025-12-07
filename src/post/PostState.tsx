@@ -3,7 +3,7 @@ import
         useState,
         useCallback
     } from 'react';
-const API_POST_STATE_BASE_URL: string = 'http://localhost:7878/api';
+const API_POST_STATE_BASE_URL: string = 'http://localhost:8080';
 
 export interface PostState<T> {
     data: T | null;
